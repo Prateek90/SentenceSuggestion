@@ -1,6 +1,6 @@
 import json
 
-with open('/home/prateek/sample_conversations.json') as data_file:
+with open('sample_conversations.json') as data_file:
     OrignalData=json.load(data_file)
 
 service_data=list()
