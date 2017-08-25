@@ -26,7 +26,7 @@ class MyTestClass(unittest.TestCase):
             pos = randint(0,len(val1))
             val1= val1[:pos]
             val1 = val1.encode("utf-8")
-            response = self.app.get('/autocomplete?query={}'.format(val1))
+            response = self.app.get('/autocomplete?q={}'.format(val1))
             data=json.loads(response.get_data(as_text=True))
 
             # Flag variable check for the validity of received response
