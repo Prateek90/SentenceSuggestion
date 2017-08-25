@@ -15,7 +15,7 @@ class MyTestClass(unittest.TestCase):
 
     # Test case for testing response
     # This test case checks for the presence of query inside the results
-    def test_response(self):
+        def test_response(self):
 
         # Selecting 100 random sentences from the corpus
         index = random.sample(range(0,len(service_data)),100)
@@ -23,9 +23,11 @@ class MyTestClass(unittest.TestCase):
         # Checking results for those 100 sentences
         for counter in range(100):
             val1=service_data[index[counter]]
-            pos = randint(0,len(val1))
+
+            pos = randint(1,len(val1))
             val1= val1[:pos]
             val1 = val1.encode("utf-8")
+
             response = self.app.get('/autocomplete?q={}'.format(val1))
             data=json.loads(response.get_data(as_text=True))
 
