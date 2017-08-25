@@ -15,7 +15,7 @@ class MyTestClass(unittest.TestCase):
 
     # Test case for testing response
     # This test case checks for the presence of query inside the results
-        def test_response(self):
+    def test_response(self):
 
         # Selecting 100 random sentences from the corpus
         index = random.sample(range(0,len(service_data)),100)
