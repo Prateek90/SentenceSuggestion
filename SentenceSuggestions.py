@@ -28,7 +28,7 @@ def suggestions():
         trie.addSentence(sentence)
 
     # Getting the list of suggestions by supplying query
-    result=trie.prefix(queryParams)
+    result=trie.generate_completions(queryParams)
 
     return jsonify(Completions=result)
 
