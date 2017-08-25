@@ -38,7 +38,7 @@ class Trie:
 
         currentNode.data=sentence
 
-    def prefix(self,pref):
+    def generate_completions(self,pref):
 
         sentences=list()
         newWord = pref.replace(" ","")
